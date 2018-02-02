@@ -1,0 +1,16 @@
+# type "make" command in Unix to create asme2e.pdf file 
+all:
+	latex whitepaper
+	bibtex whitepaper
+	latex whitepaper
+	latex whitepaper
+	dvips -o whitepaper.ps whitepaper.dvi
+	ps2pdf whitepaper.ps whitepaper.pdf
+
+abstract:
+	latex abstract
+	dvips -o abstract.ps abstract
+	ps2pdf abstract.ps abstract.pdf
+
+clean:
+	(rm -rf *.ps *.log *.dvi *.aux *.*% *.lof *.lop *.lot *.toc *.idx *.ilg *.ind *.bbl *blg)

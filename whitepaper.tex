@@ -1,0 +1,47 @@
+\documentclass[11pt, cleanfoot, cleanhead]{asme2e}
+\usepackage{hyperref, eurosym, wrapfig, graphicx, textcomp, ragged2e, booktabs, amssymb,mathtools, multicol, incgraph,tikz,subcaption}
+\usepackage[export]{adjustbox}
+\input{00titlepage}
+\providecommand{\versionnumber}{1.1}
+
+
+\title{BlockLicense: A Decentralized Ecosystem for Licensing \& Funding}  
+\author{ The BlockLicense Team 
+    \affiliation{
+		BlockLabs P.C.\\
+		Leof. Andrea Siggrou 190\\
+		Kallithea, 17671, Greece\\ 
+		Email: info@blocklicense.io
+    }
+}
+\hypersetup{pdfinfo={
+Title={BlockLicense: A Decentralized Ecosystem for Licensing \& Funding},
+Author={The BlockLicense Team},
+Subject={BlockLicense Whitepaper v\versionnumber},
+Keywords={BlockLicense, Whitepaper, Licensing, Funding, Creative Industry, License Coin, LCN, Cryptocurrency},
+Producer={LaTeX},
+Creator={pdflatex}
+}}
+\begin{document}
+\coverPage
+\pagenumbering{arabic}
+\maketitle    
+\bigskip
+\begin{center}
+\textbf{This is not a consultation for investment paper and it should not be considered as one.}
+\end{center}
+\bigskip
+\input{01abstract}
+\input{02nomenclature}
+\input{03introduction}
+\input{04landscape}
+\input{05licensing}
+\input{06ecosystem}
+\input{07roadmap}
+\input{08businessmodel}
+\input{09crowdsale}
+\input{10team}
+\newpage
+\bibliographystyle{asmems4}
+\bibliography{whitepaper}
+\end{document}
