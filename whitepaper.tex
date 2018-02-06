@@ -1,27 +1,50 @@
-\documentclass[11pt, cleanfoot, cleanhead]{asme2e}
-\usepackage{hyperref, eurosym, wrapfig, graphicx, textcomp, ragged2e, booktabs, amssymb,mathtools, multicol, incgraph,tikz,subcaption}
+
+%%% use twocolumn and 10pt options with the asme2e format
+
+% \documentclass[11pt, cleanfoot,cleanhead]{asme2e}
+\documentclass[oneside, onecolumn, 11pt, final, cleanfoot, cleanhead]{asme2e}
+\usepackage[hypertex]{hyperref}
+\usepackage{eurosym}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{ragged2e}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{amssymb,mathtools,multicol}
+\usepackage{dblfloatfix}
 \usepackage[export]{adjustbox}
+\usepackage{incgraph,tikz}
 \input{00titlepage}
-\providecommand{\versionnumber}{1.1}
+\providecommand{\versionnumber}{1.2}
+%\special{papersize=8.5in,11in}
+
+% %% The class has several options
+% %  onecolumn/twocolumn - format for one or two columns per page
+% %  10pt/11pt/12pt - use 10, 11, or 12 point font
+% %  oneside/twoside - format for oneside/twosided printing
+% %  final/draft - format for final/draft copy
+% %  cleanfoot - take out copyright info in footer leave page number
+% %  cleanhead - take out the conference banner on the title page
+% %  titlepage/notitlepage - put in titlepage or leave out titlepage
+% %  
+% %% The default is oneside, onecolumn, 10pt, final 
 
 
+%%% You need to remove 'DRAFT: ' in the title for the final submitted version.
 \title{BlockLicense: A Decentralized Ecosystem for Licensing \& Funding}  
+% \normalsize W\MakeLowercase{hitepaper v\versionnumber}}
+
+%%% first authors
 \author{ The BlockLicense Team 
     \affiliation{
 		BlockLabs P.C.\\
 		Leof. Andrea Siggrou 190\\
-		Kallithea, 17671, Greece\\ 
+		Kallithea, 17671, Greece\\
 		Email: info@blocklicense.io
     }
 }
-\hypersetup{pdfinfo={
-Title={BlockLicense: A Decentralized Ecosystem for Licensing \& Funding},
-Author={The BlockLicense Team},
-Subject={BlockLicense Whitepaper v\versionnumber},
-Keywords={BlockLicense, Whitepaper, Licensing, Funding, Creative Industry, License Coin, LCN, Cryptocurrency},
-Producer={LaTeX},
-Creator={pdflatex}
-}}
+
 \begin{document}
 \coverPage
 \pagenumbering{arabic}
@@ -31,17 +54,77 @@ Creator={pdflatex}
 \textbf{This is not a consultation for investment paper and it should not be considered as one.}
 \end{center}
 \bigskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \input{01abstract}
 \input{02nomenclature}
 \input{03introduction}
 \input{04landscape}
-\input{05licensing}
-\input{06ecosystem}
-\input{07roadmap}
-\input{08businessmodel}
-\input{09crowdsale}
-\input{10team}
+\input{05blocklicense}
+\input{06licensing}
+\input{07ecosystem}
+\input{08future}
+\input{09roadmap}
+\input{10crowdsale}
+\input{11team}
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section*{FIGURES AND TABLES}
+
+% All figures should be positioned at the top of the page where possible.  All figures should be numbered consecutively and captioned; the caption uses all capital letters, and centered under the figure as shown in Fig.~\ref{figure_ASME}. All text within the figure should be no smaller than 7~pt. There should be a minimum two line spaces between figures and text. The number of a referenced figure or table in the text should be preceded by Fig.\ or Tab.\ respectively unless the reference starts a sentence in which case Fig.\ or Tab.\ should be expanded to Figure or Table.
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %%%%%%%%%%%%%%%% begni figure %%%%%%%%%%%%%%%%%%%
+% \begin{figure}[t]
+% \begin{center}
+% \setlength{\unitlength}{0.012500in}%
+% \begin{picture}(115,35)(255,545)
+% \thicklines
+% \put(255,545){\framebox(115,35){}}
+% \put(275,560){Beautiful Figure}
+% \end{picture}
+% \end{center}
+% \caption{THE FIGURE CAPTION USES CAPITAL LETTERS.}
+% \label{figure_ASME} 
+% \end{figure}
+% %%%%%%%%%%%%%%%% end figure %%%%%%%%%%%%%%%%%%% 
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%% end table %%%%%%%%%%%%%%%%%%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% All tables should be numbered consecutively and  captioned; the caption should use all capital letters, and centered above the table as shown in Table~\ref{table_ASME}. The body of the table should be no smaller than 7 pt.  There should be a minimum two line spaces between tables and text.
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section*{FOOTNOTES\protect\footnotemark}
+% \footnotetext{Examine the input file, asme2e.tex, to see how a footnote is given in a head.}
+
+% Footnotes are referenced with superscript numerals and are numbered consecutively from 1 to the end of the paper\footnote{Avoid footnotes if at all possible.}. Footnotes should appear at the bottom of the column in which they are referenced.
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section*{CITING REFERENCES}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The ASME reference format is defined in the authors kit provided by the ASME.  The format is:
+
+% \begin{quotation}
+% {\em Text Citation}. Within the text, references should be cited in  numerical order according to their order of appearance.  The numbered reference citation should be enclosed in brackets.
+% \end{quotation}
+
+% The references must appear in the paper in the order that they were cited.  In addition, multiple citations (3 or more in the same brackets) must appear as a `` [1-3]''.  A complete definition of the ASME reference format can be found in the  ASME manual.
+
+
 \newpage
+
 \bibliographystyle{asmems4}
+
+
 \bibliography{whitepaper}
+
+
 \end{document}

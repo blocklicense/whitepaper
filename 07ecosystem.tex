@@ -7,7 +7,7 @@ We believe that the current model of Maker \& Exchange Platforms is not fair to 
 
 All transactions within the BlockLicense ecosystem take place in License Coins (LCN) (Table \ref{table:lcn}), an Ethereum based ERC20 \cite{erc20} token, enabling very fast transactions and almost instant payouts. An ecosystem-specific token is paramount to the viability of the project since its price is not affected by the fluctuations of Ether, it creates a closed ecosystem economy and it enables us to provide incentives to creators and buyers for participating in the BlockLicense Ecosystem. Also, since LCN has utilitarian value within the BlockLicense ecosystem, LCN holders will be encouraged to use BlockLicense for their licensing needs and help the community grow. Initial LCN distribution will take place through a crowdsale that is described in detail in Section \ref{crowdsale} of this document and through which we will be bootstrapping the development and promotion of the ecosystem. Once the LCN crowdsale is over, LCN will be listed in several crypto exchanges to be traded at will.
 
-\begin{table}[t!]
+\begin{table}[!htbp]
 \begin{center}
 \begin{tabular}{c c c c c c}
 & & \\ % put some space after the caption
@@ -26,7 +26,7 @@ All transactions within the BlockLicense ecosystem take place in License Coins (
 
 The BlockLicense Web Platform is a web-based marketplace for BlockLicense content. The Platform is the central gateway where buyers can browse submitted content and acquire licenses on digital files for their desired use-case. The Web Platform is mainly targetting buyers of digital content.
 
-\subsection{Website Shop Widgets}
+\subsection{Eshop Widgets}
 A very important part of the ecosystem are Shop Widgets that enable the embedding of shops in custom websites. Shop widgets utilize the Reseller feature of BlockLicene, by enabling buyers to act as curators of content and create lists of digital content than can be embedded and sold through their personal websites.
 
 \subsection{The BlockLicense App}
@@ -48,12 +48,12 @@ The BlockLicense MobileApp provides tools for submitting time-sensitive content 
 
 The BlockLicense Architecture utilizes decentralized services for the core functionality of the system, enforcing the longevity of submitted data while decoupling the availability of services from BlockLicense success. The Ethereum blockchain and Virtual Machine are used for the verification of all BlockLicense metadata attached to a file and for all payment processing and routing needs as specified by the creator. IPFS \cite{ipfs} is used for storage of binary files while BigchainDB \cite{bigchaindb} is used for all database related needs of the ecosystem.
 
-\begin{figure}[h]
+\begin{figure}[!htbp]
 \centering
 \begin{minipage}{1\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{./figures/fig7.png}
-  \caption{BlockLicense System Architecture.}
+  \captionof{figure}{BlockLicense System Architecture.}
   \label{fig:system}
 \end{minipage}%
 \end{figure}
