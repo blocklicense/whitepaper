@@ -1,0 +1,72 @@
+\documentclass[oneside, onecolumn, 11pt, final, cleanfoot, cleanhead]{asme2e}
+\usepackage[hypertex]{hyperref}
+\usepackage{eurosym}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{ragged2e}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{amssymb,mathtools,multicol}
+\usepackage{dblfloatfix}
+\usepackage[export]{adjustbox}
+\usepackage{incgraph,tikz}
+\makeatletter
+\newif\if@checkentries
+\renewenvironment{nomenclature}[1][]
+ {\if\relax\detokenize{#1}\relax
+    \@checkentriesfalse
+  \else
+    \settowidth{\@tempdima}{#1\quad}%
+    \@checkentriestrue
+  \fi
+  \def\entry##1##2{%
+    \sbox\@tempboxa{##1\quad}%
+    \if@checkentries
+      \ifdim\wd\@tempboxa>\@tempdima
+        \@latex@warning{Entry `\unexpanded{##1}' is wider}%
+        \@tempdima=\wd\@tempboxa
+      \fi
+    \else
+      \@tempdima=\wd\@tempboxa
+    \fi
+    \hangindent\@tempdima
+    \noindent\makebox[\@tempdima][l]{##1}\ignorespaces##2\par}%
+    \section*{NOMENCLATURE}}
+ {\par\addvspace{12pt}}
+\makeatother
+\input{00titlepage}
+\providecommand{\versionnumber}{1.2}
+\title{BlockLicense: A Decentralized Ecosystem for Licensing \& Funding}  
+\author{ The BlockLicense Team 
+    \affiliation{
+		BlockLabs P.C.\\
+		Leof. Andrea Siggrou 190\\
+		Kallithea, 17671, Greece\\
+		Email: info@blocklicense.io
+    }
+}
+\begin{document}
+\coverPage
+\pagenumbering{arabic}
+\maketitle     
+\bigskip
+\begin{center}
+\textbf{This is not a consultation for investment paper and it should not be considered as one.}
+\end{center}
+\bigskip
+\input{01abstract}
+\input{02nomenclature}
+\input{03introduction}
+\input{04landscape}
+\input{05blocklicense}
+\input{06licensing}
+\input{07ecosystem}
+\input{08future}
+\input{09roadmap}
+\input{10crowdsale}
+\input{11team}
+\newpage
+\bibliographystyle{asmems4}
+\bibliography{BlockLicense-Whitepaper}
+\end{document}
